@@ -1,0 +1,91 @@
+body{
+    background-color: rgba(206, 183, 206, 0.925);
+    color:black;
+    padding:40px;
+    line-height:1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    display:flex;
+    justify-content: center;
+}
+.accordian{
+    background-color: white;
+    padding:4px 16px;
+    margin-bottom:16px;
+    border-radius:14px;
+    box-shadow: 1px 1px 15px rgb(233, 206, 215);
+    cursor:pointer;
+
+}
+.questions{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    
+    
+}
+.icons{
+    margin-right:17px;
+    transition:transform 0.2s;
+}
+.icons.active{
+    transform: rotate(-180deg);
+}
+.answers{
+    color:#666;
+    max-height:0;
+    overflow:hidden;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 600px) {
+    body {
+        width:333px;
+    }
+    .accordian{
+        padding: 8px 12px;
+        margin-bottom: 12px;
+    }
+
+ .questions {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size:15px;
+    }
+    .icons {
+        margin-right: 0;
+        margin-top: 8px;
+    }
+}
+
+
+
+/* For medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        padding: 30px;
+    }
+    .accordian {
+        padding: 6px 14px;
+        margin-bottom: 14px;
+    }
+    .questions {
+        font-size:15px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* For large devices (desktops) */
+@media (min-width: 1025px) {
+    body {
+        padding: 50px;
+    }
+    .accordian {
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+}
